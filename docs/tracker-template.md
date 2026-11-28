@@ -87,3 +87,21 @@ An empty cell counts as 0.
 ## Watchlist
 
 Companies to watch, one per row, with a note on why. Optional: a scheduled web search can read it and add new postings to the Tracker tab as "To screen".
+
+## Search log
+
+The Search log tab is the state of a search run. The search writes one row for each reading helper, and a later chat reads the tab to continue the run. It has nine columns.
+
+| Column | Header | What goes in it |
+|---|---|---|
+| A | Helper | The helper number, from the table "How to group the sites into helpers" in "Job 1 Search Sites" |
+| B | Round | The round the helper runs in |
+| C | Source | The site or the search that the helper reads |
+| D | When | "Every run" or "When time allows" |
+| E | Run date | YYYY-MM-DD of the run that wrote the row |
+| F | Result | One word: "done", "partly", "blocked" or "not run". The reason goes in column I |
+| G | Cards seen | A number |
+| H | Cards kept | A number |
+| I | Reason or note | Why a helper was blocked, or what he must do first |
+
+Row 80 is the LinkedIn cool-down. Cell E80 holds the date of the last LinkedIn limit, login-wall or verification message. A job that finds today's date there does no LinkedIn work in that chat.

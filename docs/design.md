@@ -18,15 +18,24 @@ For a cover letter the model does not write a story. It copies one approved stor
 
 ## 2. The human gate
 
-The system reads websites and writes drafts. It never clicks Apply, never submits a form, never sends a message.
+No job sends a message or a connection request to a person. The person sends every message himself.
 
-Every job states this in its rules, and every site sheet lists the buttons that are never clicked. The person reads each draft, fills each form and presses each button. The tracker records what he reports he did, not what the model thinks happened.
+Applications have a narrow gate. Only the apply job may submit, and only when all of these are true:
+
+- the person gave the permission sentence for this chat;
+- the route is on the job's own table: a one-click application on a job board, or a simple form that needs no account;
+- every value in the form comes from "Facts and Answers";
+- nothing on the way asks for a password, a sign-in, a new account, a one-time code, a CAPTCHA, a payment or a timed test.
+
+Any other row is handed back in one message, with the reason and with the prepared text. LinkedIn is read-only in every job. The tracker records what was submitted and by whom.
 
 This keeps three things true:
 
-- every application and message that goes out is one the person chose and read;
-- a mistake in a draft costs a correction, not an application;
-- the sites are only read, at a low volume, and never acted on.
+- every message that goes out is one the person chose and read;
+- an application that the chat submits holds only facts that the person approved once;
+- an account, a credential or a test is never touched.
+
+The first version had a wider gate: it submitted nothing. The gate was narrowed after the drafts had been checked by hand for some days, and only for the routes where a wrong answer is unlikely and cheap.
 
 ## 3. Built for a small model
 
@@ -39,6 +48,7 @@ What that means in practice:
 - Every judgement is a table: condition in the first column, outcome in the next.
 - Every cell the job writes has a pattern and one filled example.
 - Every check can be run with code against a fresh read of the tracker, and states what "pass" is.
+- State that must survive a chat lives in the tracker, never in the chat. The search writes one row for each helper in the "Search log" tab, so a new chat continues a run from the log. One cell of that tab holds the date of a LinkedIn limit message, and every job reads it before it opens LinkedIn.
 - When a case is not covered, the job takes the cautious outcome, keeps the row, puts the open question first, and names the case in its report. It never stops to ask when the person is not there.
 
 The cost is length: the documents are long, and a change to a shared rule must be made in every job that carries it. The gain is that a cheaper model runs each job the same way every time.

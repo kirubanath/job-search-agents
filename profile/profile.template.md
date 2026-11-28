@@ -43,6 +43,7 @@ The pay table in the jobs has four bands and three values. {{pay_high}}, {{pay_m
 | {{pay_floor}} | The private floor. It is never written in any text you send. A stated band below it is out. Between it and {{pay_target}}, you decide after the first call. | 22 LPA |
 | {{pay_line_no_band}} | The exact pay line when no band is stated or found. | 24 to 30 LPA fixed, flexible for the right role and hours |
 | {{current_pay}} | Your current pay as you state it when asked. It never changes. | 25 LPA fixed |
+| {{pay_usd}} | The figure for a required pay field that takes only US dollars, as a plain number. | 30000 |
 
 "In digits" in the tables means the same value written as a plain number for a number-only box, for example 2600000 for 26 LPA.
 
